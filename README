@@ -1,0 +1,7 @@
+This is a palette viewer, it loads an image and calculates all the different
+colors in the image, you can select a region using a mouse, zooming is not
+supported sadly nor non-rect selections.
+
+Use build.sh to build, you need QT 4.8 or higher (probably an older would work
+but that was what this program is developed under) and g++ that supports
+c++11
