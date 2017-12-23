@@ -185,6 +185,7 @@ void Viewer::mousePressEvent(QMouseEvent *e)
         return;
 
     QPoint pt;
+	QTransform idt;
     int ox, oy;
     switch (e->button())
     {
@@ -192,7 +193,7 @@ void Viewer::mousePressEvent(QMouseEvent *e)
             ox = horizontalScrollBar()->value();
             oy = verticalScrollBar()->value();
             pt = QPoint(ox, oy) + e->pos();
-            if (scene.itemAt(pt.x(), pt.y()) == NULL)
+            if (scene.itemAt(pt.x(), pt.y(), idt) == NULL)
                 return;
 
             selectP1 = pt;

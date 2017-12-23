@@ -1,6 +1,7 @@
 #pragma once
 
-#include <QtGui>
+#include <QtWidgets>
+#include <QTransform>
 #include "colorwell.h"
 
 #define MAX_PALETTE_COLUMN 16
