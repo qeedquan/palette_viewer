@@ -185,7 +185,7 @@ void Viewer::mousePressEvent(QMouseEvent *e)
         return;
 
     QPoint pt;
-	QTransform idt;
+    QTransform idt;
     int ox, oy;
     switch (e->button())
     {
