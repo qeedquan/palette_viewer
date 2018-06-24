@@ -30,7 +30,7 @@ private:
     void saveImageRegionFile(bool region);
 
 public:
-    App(int argc, char *argv[]);
+    App(int &argc, char *argv[]);
 
 public slots:
     void keypress(QKeyEvent *e);

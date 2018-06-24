@@ -6,7 +6,7 @@ void Window::keyPressEvent(QKeyEvent *e)
     emit keypress(e);
 }
 
-App::App(int argc, char *argv[]) : QApplication(argc, argv)
+App::App(int &argc, char *argv[]) : QApplication(argc, argv)
 {
     currentDir = QDir::currentPath();
 
@@ -44,7 +44,6 @@ App::App(int argc, char *argv[]) : QApplication(argc, argv)
     connect(save, SIGNAL(triggered()), this, SLOT(saveFile()));
     connect(saveas, SIGNAL(triggered()), this, SLOT(saveAsFile()));
     connect(saver, SIGNAL(triggered()), this, SLOT(saveAsRegionFile()));
-
     connect(window, SIGNAL(keypress(QKeyEvent*)), this, SLOT(keypress(QKeyEvent*)));
 
     // put viewer into grid and then embed the window into main window
